@@ -1,0 +1,125 @@
+:root{
+    --color-one:#051414;
+    --color-two:#cde4e7;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;     
+}
+
+body{
+    background-image: url(img/bg.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#header, #footer{
+    background-color: rgba(83, 83, 83, 0.2);  
+    backdrop-filter: blur(5px);
+}
+
+#header{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#footer{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+#body{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title-container{
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    padding-right: 15px;
+    /* height: 80%; */
+    display: flex;
+    align-items: center;
+}
+#logo{
+    padding-right: 15px;
+    margin-right: 15px;
+}
+
+#nav{
+    margin-left: auto;
+    padding: 10px;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#git-link > span {
+    font-size: 10px;
+}
+
+/* BODY ELEMENTS BELOW */
+
+#game{
+    width: 1200px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#vs-player, #vs-cpu{
+    background-color: rgba(83, 83, 83, 0.2);  
+    backdrop-filter: blur(5px);
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    transition: 0.3s;
+}
+
+#player-container, #cpu-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#player-container > p, #cpu-container > p {
+    z-index: 999;
+    transition: 0.2s;
+}
+
+#player-container{
+    align-self: flex-start;
+}
+
+#cpu-container{
+    align-self: flex-end;
+}
+
+#vs-player:hover, #vs-cpu:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+    box-shadow: 0 0 10px 5px rgba(250, 128, 195, 0.2);
+}
+
+#player-container:hover > p, #cpu-container:hover{
+    font-weight: bolder;
+    transition: 0.2s;
+}
